@@ -6,7 +6,7 @@ export const HeroSwiper = new Swiper('.hero-swiper', {
       crossFade: true
     },
     autoplay: {
-      speed: 300,
+      delay: 3000,
   },
   allowTouchMove: false,
 });
