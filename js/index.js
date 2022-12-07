@@ -35,10 +35,11 @@ const main = async () => {
         fadeEffect: { 
             crossFade: true
         },
+        speed: 1000,
         autoplay: {
-            speed: 300,
+            delay: 5000,
         },
-        allowTouchMove: false,
+        allowTouchMove: true,
     });
 }
 main()

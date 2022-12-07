@@ -20,10 +20,10 @@ export const titleGsap = gsap.timeline()
     .to(".title span:nth-of-type(6)", { x: "-1em", duration:.3 }, "-=0.2")
     .to(".title span:nth-of-type(7)", { x: "-1em", duration:.3 }, "-=0.2")
     .to(".title span:nth-of-type(8)", { x: "-1em", duration:.3, opacity: 0 }, "-=0.2")
-    .to(".title span:nth-of-type(9)", { x: "-2em", duration:.3, opacity: 0 }, "-=0.2")
-    .to(".title span:nth-of-type(10)", { opacity: 1, duration:.3, delay:.1 }, "-=0.2")
+    .to(".title span:nth-of-type(9)", { x: "-2em", duration:.3, opacity: 0 }, "-=0.3")
+    .to(".title span:nth-of-type(10)", { opacity: 1, duration: .5, delay:.2 }, "-=0.2")
     .to(".title span:nth-of-type(11)", displayTitle)
-    .to(".header-wrapper", {opacity: 0, duration:.3, display:"none", delay: 1})
+    .to(".header-wrapper", { opacity: 0, duration:.5, display:"none", delay: 1 })
 
 // x: x軸方向への移動量
 // y: y軸方向への移動量
