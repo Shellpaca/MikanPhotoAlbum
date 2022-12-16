@@ -25,8 +25,18 @@ const createElemImageTag = imageName => {
 
 const main = async () => {
     const rootObj = await getImagesJson();
-    rootObj.imgFileNames.forEach(fileName =>{
-        createElemImageTag(fileName)
+    
+    const shuffle = ([...arr]) => {
+        for (let i = arr.length - 1; i >= 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr
+    }
+
+    shuffle(rootObj.imgFileNames)
+        .forEach(fileName => {
+            createElemImageTag(fileName)
     });
 
     new Swiper('.hero-swiper', {
@@ -35,10 +45,11 @@ const main = async () => {
         fadeEffect: { 
             crossFade: true
         },
+        speed: 1000,
         autoplay: {
-            speed: 300,
+            delay: 5000,
         },
-        allowTouchMove: false,
+        allowTouchMove: true,
     });
 }
 main()
